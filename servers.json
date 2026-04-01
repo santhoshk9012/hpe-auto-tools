@@ -1,0 +1,6 @@
+[
+    {"name": "dl380", "ip": "172.18.69.79", "status": "active"},
+    {"name": "dl360", "ip": "172.18.69.80", "status": "offline"},
+    {"name": "dl325", "ip": "172.18.69.81", "status": "active"},
+    {"name": "alletra4002", "ip": "172.18.69.82", "status": "offline"}
+]
