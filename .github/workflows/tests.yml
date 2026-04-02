@@ -6,8 +6,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -26,8 +29,10 @@ jobs:
       - name: Show Report Output
         run: cat HW_Config_Report.txt
 
-      - name: Upload output file
-        uses: actions/upload-artifact@v4
-        with:
-          name: hw-config-report
-          path: HW_Config_Report.txt
+      - name: Commit updated report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add HW_Config_Report.txt
+          git commit -m "Auto update HW config report" || echo "No changes to commit"
+          git push
