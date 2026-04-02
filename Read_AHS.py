@@ -1,24 +1,5 @@
-import argparse
 import sys
 import os
-
-# CLI setup
-parser = argparse.ArgumentParser(description="HPE AHS Parser Tool")
-parser.add_argument("--file", required=True, help="Path to AHS_Summary.txt")
-parser.add_argument("--output", default="HW_Config_Report.txt", help="Output report filename")
-args = parser.parse_args()
-
-
-
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-#with open("AHS_Summary.txt", "r") as file:
-if not os.path.exists(args.file):
-    print(f"Error: File '{args.file}' not found.")
-    sys.exit(1)
-
-with open(args.file, "r") as file:
-    lines = file.readlines()
 
 # Simple field extractor
 def find_field(keyword, lines):
@@ -142,19 +123,32 @@ def get_memory(lines):
     return memory
 
 
-#report
-cpu_name, cpu_qty = get_cpu(lines)
-nics = get_nics(lines)
-memory = get_memory(lines)
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="HPE AHS Parser Tool")
+    parser.add_argument("--file", required=True)
+    parser.add_argument("--output", default="HW_Config_Report.txt")
+    args = parser.parse_args()
 
-for nic in nics:
-    nic["driver"] = get_driver(nic["name"], lines)
+    if not os.path.exists(args.file):
+        print(f"Error: File '{args.file}' not found.")
+        sys.exit(1)
 
-memory_str = ""
-for slot in memory:
-    memory_str += f"\n        {slot.get('location', '[MANUAL]')}  {slot.get('size', '')}"
+    with open(args.file, "r") as file:
+        lines = file.readlines()
 
-report = f"""
+    cpu_name, cpu_qty = get_cpu(lines)
+    nics = get_nics(lines)
+    memory = get_memory(lines)
+    for nic in nics:
+        nic["driver"] = get_driver(nic["name"], lines)
+
+    memory_str = ""
+    for slot in memory:
+        memory_str += f"\n        {slot.get('location','[MANUAL]')}  {slot.get('size','')}"
+
+    report = f"""
 Hardware Configuration
 * Server Type     : {find_field("Product:", lines)}
 * ROM Family & ver: {get_bios(lines)}
@@ -169,47 +163,14 @@ Hardware Configuration
 * CPU Qty         : {cpu_qty}
 * Memory Type & Total RAM:{memory_str}
 
-
 [NIC/CNA]"""
 
-for nic in nics:
-    report += f"""
+    for nic in nics:
+        report += f"""
 * NIC Type : {nic.get("name", "[MANUAL]")}
   Slot     : {nic.get("slot", "[MANUAL]")}
   FW Ver   : {nic.get("fw", "[MANUAL]")}
-  Driver   : {nic.get("driver", "[MANUAL]")} """
-
-# ── Save to file ────────────────────────────────────
-if __name__ == "__main__":
-    import argparse
-    import sys
-
-    parser = argparse.ArgumentParser(description="HPE AHS Parser Tool")
-    parser.add_argument("--file", required=True, help="Path to AHS_Summary.txt")
-    parser.add_argument("--output", default="HW_Config_Report.txt", help="Output report filename")
-    args = parser.parse_args()
-
-    if not os.path.exists(args.file):
-        print(f"Error: File '{args.file}' not found.")
-        sys.exit(1)
-
-    with open(args.file, "r") as file:
-        lines = file.readlines()
-
-    # all your report building code here
-    cpu_name, cpu_qty = get_cpu(lines)
-    nics = get_nics(lines)
-    memory = get_memory(lines)
-    for nic in nics:
-        nic["driver"] = get_driver(nic["name"], lines)
-
-    # memory string
-    memory_str = ""
-    for slot in memory:
-        memory_str += f"\n        {slot.get('location', '[MANUAL]')}  {slot.get('size', '')}"
-
-    # report and save
-    report = f"""..."""  # your existing report string
+  Driver   : {nic.get("driver", "[MANUAL]")}"""
 
     with open(args.output, "w") as f:
         f.write(report)
