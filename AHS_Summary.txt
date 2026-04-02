@@ -201,6 +201,12 @@ Networking Dashboard
   Status: OK
   Firmware Version: 26.46.3048
   Ports: Personality: 
+
+  Product: Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
+  Slot #: PCI-E Slot 4
+  Status: OK
+  Firmware Version: 20.35.41
+  Ports: Personality: 
    
          
 Power Dashboard
