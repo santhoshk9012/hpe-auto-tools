@@ -1,1 +1,30 @@
 
+Hardware Configuration
+* Server Type     : ProLiant DL365 Gen10 Plus
+* ROM Family & ver: A42 v3.90 (10/03/2025)
+* OS Version      : Microsoft Windows Server 2022 Datacenter, 10.0.20348
+* Build Type      : [MANUAL]-DP, VP, DSPB, DMVB, Production
+* OS Installed on : [MANUAL]-HDD/BFS
+* Secure Boot     : [MANUAL]-Enabled/disabled
+* Boot Mode       : [MANUAL]-UEFI/legacy
+* iLO Version     : iLO 5 v3.16p12 built on Oct 06 2025
+* CPLD Version    : 0x31
+* CPU Family      : AMD EPYC 7713 64-Core Processor
+* CPU Qty         : 2
+* Memory Type & Total RAM:
+        PROC 1 DIMM 16  8 GB
+        PROC 2 DIMM 16  8 GB
+
+[NIC/CNA]
+* NIC Type : ConnectX-6 Dx 100GE 2P NIC
+  Slot     : PCI-E Slot 1
+  FW Ver   : 22.46.3048
+  Driver   : mlx5.sys, 25.7.26882.0
+* NIC Type : Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
+  Slot     : PCI-E Slot 2
+  FW Ver   : 20.35.41
+  Driver   : b57nd60a.sys, 221.0.8.0
+* NIC Type : Mellanox ConnectX-6 LX OCP3.0
+  Slot     : OCP 3.0 Slot 10
+  FW Ver   : 26.46.3048
+  Driver   : mlx5.sys, 25.7.26882.0
