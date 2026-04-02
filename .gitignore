@@ -1,0 +1,10 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Pytest cache
+.pytest_cache/
+
+# Environment / OS noise (optional)
+.DS_Store
+Thumbs.db
