@@ -28,3 +28,7 @@ Hardware Configuration
   Slot     : OCP 3.0 Slot 10
   FW Ver   : 26.46.3048
   Driver   : mlx5.sys, 25.7.26882.0
+* NIC Type : Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
+  Slot     : PCI-E Slot 4
+  FW Ver   : 20.35.41
+  Driver   : b57nd60a.sys, 221.0.8.0
