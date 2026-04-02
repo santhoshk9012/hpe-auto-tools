@@ -1,8 +1,23 @@
+import argparse
+import sys
 import os
+
+# CLI setup
+parser = argparse.ArgumentParser(description="HPE AHS Parser Tool")
+parser.add_argument("--file", required=True, help="Path to AHS_Summary.txt")
+parser.add_argument("--output", default="HW_Config_Report.txt", help="Output report filename")
+args = parser.parse_args()
+
+
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-with open("AHS_Summary.txt", "r") as file:
+#with open("AHS_Summary.txt", "r") as file:
+if not os.path.exists(args.file):
+    print(f"Error: File '{args.file}' not found.")
+    sys.exit(1)
+
+with open(args.file, "r") as file:
     lines = file.readlines()
 
 # Simple field extractor
@@ -165,7 +180,9 @@ for nic in nics:
   Driver   : {nic.get("driver", "[MANUAL]")} """
 
 # ── Save to file ────────────────────────────────────
-with open("HW_Config_Report.txt", "w") as f:
+#with open("HW_Config_Report.txt", "w") as f:
+#    f.write(report)
+with open(args.output, "w") as f:
     f.write(report)
 
 print("Report generated successfully!")
