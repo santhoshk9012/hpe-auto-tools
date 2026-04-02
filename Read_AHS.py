@@ -180,10 +180,39 @@ for nic in nics:
   Driver   : {nic.get("driver", "[MANUAL]")} """
 
 # ── Save to file ────────────────────────────────────
-#with open("HW_Config_Report.txt", "w") as f:
-#    f.write(report)
-with open(args.output, "w") as f:
-    f.write(report)
+if __name__ == "__main__":
+    import argparse
+    import sys
 
-print("Report generated successfully!")
-print(report)
+    parser = argparse.ArgumentParser(description="HPE AHS Parser Tool")
+    parser.add_argument("--file", required=True, help="Path to AHS_Summary.txt")
+    parser.add_argument("--output", default="HW_Config_Report.txt", help="Output report filename")
+    args = parser.parse_args()
+
+    if not os.path.exists(args.file):
+        print(f"Error: File '{args.file}' not found.")
+        sys.exit(1)
+
+    with open(args.file, "r") as file:
+        lines = file.readlines()
+
+    # all your report building code here
+    cpu_name, cpu_qty = get_cpu(lines)
+    nics = get_nics(lines)
+    memory = get_memory(lines)
+    for nic in nics:
+        nic["driver"] = get_driver(nic["name"], lines)
+
+    # memory string
+    memory_str = ""
+    for slot in memory:
+        memory_str += f"\n        {slot.get('location', '[MANUAL]')}  {slot.get('size', '')}"
+
+    # report and save
+    report = f"""..."""  # your existing report string
+
+    with open(args.output, "w") as f:
+        f.write(report)
+
+    print("Report generated successfully!")
+    print(report)
