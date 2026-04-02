@@ -1,4 +1,4 @@
-name: Run Tests
+name: Run Tests and Parse AHS
 
 on: [push]
 
@@ -7,11 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
+
       - name: Install pytest
         run: pip install pytest
+
       - name: Run tests
         run: pytest test_ahs.py -v
+
+      - name: Run AHS Parser
+        run: python Read_AHS.py --file AHS_Summary.txt --output Report.txt
+
+      - name: Show Report Output
+        run: cat Report.txt
