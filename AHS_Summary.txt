@@ -19,6 +19,8 @@ Processors
         Version: AMD EPYC 7713 64-Core Processor
     Processor 2
         Version: AMD EPYC 7713 64-Core Processor
+    Processor 3
+        Version: AMD EPYC 7713 64-Core Processor
 
 Memory
     Total Physical Memory: 16 GB
@@ -45,6 +47,10 @@ Mellanox ConnectX-6 LX OCP3.0
         Firmware: 26.46.3048
         Serial #: ILC141001X
         Driver: mlx5.sys, 25.7.26882.0
+Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
+        Firmware: 20.35.41
+        Serial #: VNE21408YN
+        Driver: b57nd60a.sys, 221.0.8.0
 
 System BIOS
     BIOS Vendor: HPE
