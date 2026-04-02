@@ -58,3 +58,5 @@ for server in servers:
 print("server needs attention:", down_servers)
 
 print("Total servers down:", count)
+
+
