@@ -10,7 +10,7 @@ Hardware Configuration
 * iLO Version     : iLO 5 v3.16p12 built on Oct 06 2025
 * CPLD Version    : 0x31
 * CPU Family      : AMD EPYC 7713 64-Core Processor
-* CPU Qty         : 2
+* CPU Qty         : 3
 * Memory Type & Total RAM:
         PROC 1 DIMM 16  8 GB
         PROC 2 DIMM 16  8 GB
