@@ -5,6 +5,7 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -24,3 +25,9 @@ jobs:
 
       - name: Show Report Output
         run: cat HW_Config_Report.txt
+
+      - name: Upload output file
+        uses: actions/upload-artifact@v4
+        with:
+          name: hw-config-report
+          path: HW_Config_Report.txt
