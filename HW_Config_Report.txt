@@ -10,7 +10,7 @@ Hardware Configuration
 * iLO Version     : iLO 5 v3.16p12 built on Oct 06 2025
 * CPLD Version    : 0x31
 * CPU Family      : AMD EPYC 7713 64-Core Processor
-* CPU Qty         : 3
+* CPU Qty         : 2
 * Memory Type & Total RAM:
         PROC 1 DIMM 16  8 GB
         PROC 2 DIMM 16  8 GB
@@ -28,7 +28,3 @@ Hardware Configuration
   Slot     : OCP 3.0 Slot 10
   FW Ver   : 26.46.3048
   Driver   : mlx5.sys, 25.7.26882.0
-* NIC Type : Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
-  Slot     : PCI-E Slot 4
-  FW Ver   : 20.35.41
-  Driver   : b57nd60a.sys, 221.0.8.0
