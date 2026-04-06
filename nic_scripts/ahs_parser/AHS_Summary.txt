@@ -1,0 +1,235 @@
+File: C:\Users\mPhasis\Desktop\San\SPP\Nov2025SPP\DL365G10P\Win22\HPE_YK09NP004K_20251121.ahs
+   
+Product: ProLiant DL365 Gen10 Plus
+Serial #: YK09NP004K
+SKU: SKU Number Malformed
+TPM Status: TPM Not Present
+Manufacturing Site Code : 
+Manufacturing Site Name: 
+Manufacture Date (Mfg): Data Not Available
+   
+System Board
+    Manufacture Date (PCA): 2020/09/07 21:51 GMT+8
+    Serial Number (PCA): PWVEU0XRHE608Z
+    Part Number (PCA): P09185-001
+    Spare Part Number (PCA): P18718-001
+
+Processors
+    Processor 1
+        Version: AMD EPYC 7713 64-Core Processor
+    Processor 2
+        Version: AMD EPYC 7713 64-Core Processor
+
+Memory
+    Total Physical Memory: 16 GB
+      2x 8192MB 3200 MT/s, Smart Memory
+
+Power
+    Power Supply 1 @ 800 watts
+
+
+Storage
+    Embedded SATA Controller #2
+        1 x 1 TB SATA drive(s)
+
+Networking
+ConnectX-6 Dx 100GE 2P NIC
+        Firmware: 22.46.3048
+        Serial #: ILC14402F1
+        Driver: mlx5.sys, 25.7.26882.0
+Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
+        Firmware: 20.35.41
+        Serial #: VNE21408YN
+        Driver: b57nd60a.sys, 221.0.8.0
+Mellanox ConnectX-6 LX OCP3.0
+        Firmware: 26.46.3048
+        Serial #: ILC141001X
+        Driver: mlx5.sys, 25.7.26882.0
+
+System BIOS
+    BIOS Vendor: HPE
+    BIOS Version: A42
+    BIOS Date: 10/03/2025
+
+iLO
+    Version: iLO 5 v3.16p12 built on Oct 06 2025
+    License: iLO Advanced
+    Serial Number: Not Logged
+
+Fan
+  Fan : 0  @ Health Status : OK
+  Fan : 1  @ Health Status : OK
+  Fan : 2  @ Health Status : OK
+  Fan : 3  @ Health Status : OK
+  Fan : 4  @ Health Status : OK
+  Fan : 5  @ Health Status : OK
+  Fan : 6  @ Health Status : OK
+
+Software Inventory
+  Status    Component                                                                       Version
+  ---------------------------------------------------------------------------------------------------
+  OK        Operating System                                                                Microsoft Windows Server 2022 Datacenter, 10.0.20348
+  OK        AMDPSHED (amdpshed.sys, Advanced Micro Devices, Inc)                            1.0.0.51
+  OK        MXG2HDO64 (mxg2hdo64.sys, Matrox Graphics Inc.)                                 9.15.1.268
+  OK        NECHESASR (nechesasr.sys, Hewlett Packard Enterprise)                           4.7.1.0
+  OK        NECHESCHIF (necheschif.sys, Hewlett Packard Enterprise)                         4.7.1.0
+  OK        Q57ND60A (b57nd60a.sys, Broadcom Limited)                                       221.0.8.0
+         
+Firmware Inventory
+  Status    Component                                                                       Version
+  ---------------------------------------------------------------------------------------------------
+  OK        iLO                                                                             iLO 5 v3.16p12 built on Oct 06 2025
+  OK        System ROM                                                                      v3.90 (10/03/2025)
+  OK        Redundant System ROM                                                            v3.72 (05/16/2025)
+  OK        Power Management Controller Firmware                                            1.1.4
+  OK        Power Management Controller FW Bootloader                                       1.1
+  OK        System Programmable Logic Device                                                0x31
+  OK        Intelligent Platform Abstraction Data                                           11.6.0 build 20
+  OK        UBM2 Universal Backplane Manager 1 Firmware                                     1.20
+  OK        UBM2 Universal Backplane Manager 2 Firmware                                     1.20
+  OK        Embedded Video Controller                                                       2.5
+  OK        ConnectX-6 Dx 100GE 2P NIC                                                      22.46.3048
+  OK        Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC                    20.35.41
+  OK        Mellanox ConnectX-6 LX OCP3.0                                                   26.46.3048
+  OK        Embedded SATA Controller #2 Array Controller in slot 0                          N/A
+  OK        Seagate MM1000GBKAL (Embedded SATA #2)                                          HPGE
+         
+Device Inventory
+  Location: OCP 3.0 Slot 10
+  Component: Mellanox ConnectX-6 LX OCP3.0
+  Status: OK
+  Version: 26.46.3048
+  Serial Number: ILC141001X
+  Part Number: P42043-001
+   
+  Location: Storage Slot 12
+  Component: Empty slot 12
+  Status: Not Installed
+  Version: N/A
+  Serial Number: 
+  Part Number: 
+   
+  Location: PCI-E Slot 1
+  Component: ConnectX-6 Dx 100GE 2P NIC
+  Status: OK
+  Version: 22.46.3048
+  Serial Number: ILC14402F1
+  Part Number: P25962-001
+   
+  Location: PCI-E Slot 2
+  Component: Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
+  Status: OK
+  Version: 20.35.41
+  Serial Number: VNE21408YN
+  Part Number: P51180-001
+   
+  Location: PCI-E Slot 13
+  Component: HPE NS204i-r Gen10+ Boot Controller
+  Status: Disabled
+  Version: N/A
+  Serial Number: P00000XRHE3055
+  Part Number: P26463-B21
+   
+  Location: Box=1
+  Component: 8 SFF 12G x1SAS UBM2 BC BP
+  Status: OK
+  Version: 1.20
+  Serial Number: 
+  Part Number: P21219-002
+   
+  Location: Box=1
+  Component: 8 SFF 12G x1SAS UBM2 BC BP
+  Status: OK
+  Version: 1.20
+  Serial Number: 
+  Part Number: P21219-002
+   
+  Location: Embedded SATA
+  Component: Embedded SATA Controller #2
+  Status: OK
+  Version: N/A
+  Serial Number: 
+  Part Number: 
+   
+  Location: Embedded Device
+  Component: Embedded Video Controller
+  Status: OK
+  Version: 2.5
+  Serial Number: 
+  Part Number: 
+   
+         
+Physical Memory
+  Location: PROC 1 DIMM 16
+  Status: Errors Detected
+  Size: 8 GB
+  Serial Number: 29808526
+  Part Number: 9ASF1G72PZ-3G2E2
+  Correctable Errors: 110
+  Uncorrectable Errors: 2
+   
+  Location: PROC 2 DIMM 16
+  Status: OK
+  Size: 8 GB
+  Serial Number: 2AC5FAB6
+  Part Number: 9ASF1G72PZ-3G2E2
+  Correctable Errors: 0
+  Uncorrectable Errors: 0
+   
+         
+Networking Dashboard
+  Product: ConnectX-6 Dx 100GE 2P NIC
+  Slot #: PCI-E Slot 1
+  Status: OK
+  Firmware Version: 22.46.3048
+  Ports: Personality: 
+   
+  Product: Broadcom NetXtreme 5719 Quad Port Gigabit PCIe Adapter - NIC
+  Slot #: PCI-E Slot 2
+  Status: OK
+  Firmware Version: 20.35.41
+  Ports: Personality: 
+   
+  Product: Mellanox ConnectX-6 LX OCP3.0
+  Slot #: OCP 3.0 Slot 10
+  Status: OK
+  Firmware Version: 26.46.3048
+  Ports: Personality: 
+   
+         
+Power Dashboard
+  Product: Power Supply 1
+  Slot: 1
+  Status: OK
+  Firmware Version: 1.00
+  Serial Number: 5WBXU0ELLDSKMN
+  Part Number: 865414-B21
+  Spare Part Number: 866730-001
+  Option Kit: 865414-B21
+  Vendor: LTEON
+   
+         
+Storage Dashboard
+  Controllers
+    Controller: Embedded SATA Controller #2
+    Slot #: 0
+    Status: OK
+    Firmware Version: N/A
+    Serial Number: Unknown
+    Part Number: Unknown
+    Cache: 
+   
+         
+Storage Dashboard
+  Hard Drives
+    Model: MM1000GBKAL
+    Type: SATA
+    Ctrl Slot #: Embedded SATA #2
+    Port:Box:Bay: SATA Drive Box 1 Bay 4
+    Status: OK
+    Size: 1 TB
+    Firmware Version: HPGE
+    Serial Number: 9XG0FGYV
+    Spare Part Number: 
+    Configuration: Configured
+   
